@@ -1,0 +1,265 @@
+/* App.css */
+.App {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+ 
+  
+ 
+}
+
+.chat-display {
+  flex-grow: 1;
+  padding: 80px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh; /* バナー分のスペースを確保 */
+}
+.chat-display::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox用 */
+.chat-display {
+  scrollbar-width: none; /* Firefoxでスクロールバーを非表示 */
+}
+.chat-message {
+  position: relative;
+  padding: 10px 15px;
+  margin: 8px 0;
+  max-width: 60%;
+  word-wrap: break-word;
+  border-radius: 10px;
+}
+
+.chat-message.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  border-top-right-radius: 0;
+  margin-left: auto;
+}
+
+.chat-message.received {
+  align-self: flex-start;
+  background-color: #e1e1e1;
+  border-top-left-radius: 0;
+  margin-right: auto;
+}
+
+.chat-input-form {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+.chat-textarea {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  margin-right: 10px;
+}
+
+.chat-submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-submit-button:hover {
+  background-color: #45a049;
+}
+
+/* リスト内でスクロール可能にし、スクロールバーを非表示にする */
+.business-options {
+  position: sticky;
+  bottom: 60px;
+  max-height: 150px;
+  overflow-y: scroll; /* スクロールは有効 */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* スクロールバーを非表示にする（Webkit系ブラウザ用） */
+.business-options::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox用 */
+.business-options {
+  scrollbar-width: none; /* Firefoxでスクロールバーを非表示 */
+}
+
+.business-options label {
+  font-size: 16px; /* 元の文字サイズを維持 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* 追加: 上部バナーのスタイル */
+.header-banner {
+  width: 100%;
+  height: 10vh;
+  background-color: #b0c4de; /* バナーの色を設定 */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding-left: 10px; /* 左側に少し余白を追加 */
+}
+.header-text {
+  font-size: 30px; /* テキストのサイズ */
+  color: #333; /* テキストの色 */
+  font-weight: bold; /* 太字に設定 */
+}
+body {
+  overflow: hidden;
+}
+.partner-options {
+  position: sticky;
+  bottom: 60px;
+  max-height: 150px;
+  overflow-y: scroll; /* スクロールは有効 */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* スクロールバーを非表示にする（Webkit系ブラウザ用） */
+.partner-options::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox用 */
+.partner-options {
+  scrollbar-width: none; /* Firefoxでスクロールバーを非表示 */
+}
+
+.partner-options label {
+  font-size: 16px; /* 元の文字サイズを維持 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.chat-submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffb6c1; /* ピンクの柔らかい色 */
+  color: white;
+  border: none;
+  border-radius: 20px; /* 丸みを強調 */
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加して立体感を演出 */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 変化にアニメーション */
+}
+
+.chat-submit-button:hover {
+  background-color: #ff69b4; /* ホバー時の濃いピンク */
+  transform: translateY(-2px); /* ホバー時に少し浮く効果 */
+}
+
+.chat-submit-button:active {
+  background-color: #ff1493; /* クリック時のさらに濃いピンク */
+  transform: translateY(1px); /* 押した感を演出 */
+}
+.confirmation-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffb6c1; /* 柔らかいピンク */
+  color: white;
+  border: none;
+  border-radius: 20px; /* 丸みを強調 */
+  cursor: pointer;
+  margin: 0 5px; /* ボタン間に余白 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加 */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* 変化にアニメーション */
+}
+
+.confirmation-buttons button:hover {
+  background-color: #ff69b4; /* ホバー時の濃いピンク */
+  transform: translateY(-2px); /* ホバー時に少し浮く */
+}
+
+.confirmation-buttons button:active {
+  background-color: #ff1493; /* クリック時のさらに濃いピンク */
+  transform: translateY(1px); /* 押した感を演出 */
+}
+.close-button {
+  background-color: #ff7f7f; /* 優しい赤系のカラー */
+  color: white;
+  border: none;
+  border-radius: 12px; /* 丸みをつける */
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #ff4c4c; /* ホバー時のカラー */
+}
+/* App.css */
+
+/* モーダルの背景 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* モーダルの内容 */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  text-align: center;
+}
+
+/* 閉じるボタン */
+.close-button {
+  background-color: #ff7f7f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  background-color: #ff4c4c;
+}
